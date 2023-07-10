@@ -1,4 +1,6 @@
 ﻿using System;
+using T12;
+
 namespace T12
 {
 	public class Screen
@@ -7,9 +9,31 @@ namespace T12
 		public Screen()
 		{
             manager = new EmployeeManager();
-		}
+            // manager.OnLoginIn = XuLyLogin
+        }
 
-		public void PrintManagerScreen()
+        // public void XuLyLogin(Employee emp)
+        // {
+        //   if (employee == null)
+//                {
+//                    Console.WriteLine("Login fail! Wrong uname or password");
+//                } else
+//                {
+//                    checkLogin = true;
+//                    Console.WriteLine("Login success!");
+//                    // Dieu huong
+//                    if (employee.Role == EmployeeRole.MANAGER)
+//                    {
+//                        PrintManagerScreen();
+//}
+//                    else if (employee.Role == EmployeeRole.USER)
+//{
+//    PrintUserScreen();
+//}
+//                }
+        // }
+
+        public void PrintManagerScreen()
 		{
             int selected = 0;
 
@@ -121,7 +145,8 @@ namespace T12
                 if (employee == null)
                 {
                     Console.WriteLine("Login fail! Wrong uname or password");
-                } else
+                }
+                else
                 {
                     checkLogin = true;
                     Console.WriteLine("Login success!");
