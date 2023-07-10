@@ -4,11 +4,17 @@ using System.Data.SqlClient;
 using System.IO;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
+// delegate HandleLoggedIn
 namespace T12
 {
 	public class EmployeeManager
 	{
-		EmployeeDAL employeeDAL;
+        //event LoggedIn(HandleLoggedIn)
+        //event LoggedOut
+
+
+
+        EmployeeDAL employeeDAL;
 		public EmployeeManager()
 		{
 			employeeDAL = new EmployeeDAL();
@@ -18,6 +24,9 @@ namespace T12
 		public Employee? Login(string username, string password)
 		{
             return employeeDAL.SelectByUsernameAndPassword(username, password);
+
+            // if login
+            // LoggedIn()
 		}
 
 		public List<Employee> Find(string key)
